@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨交流平台</title>
+
+    <link rel="stylesheet" href="{% static 'q_home/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'q_home/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'plugin/bootstrap-3.4.1-dist/css/bootstrap.min.css' %}">
+
+
+    <style>
+        .round_icon {
+            width: 66px;
+            height: 66px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .round_icon2 {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner body-width">
+        <a href="#" style="width: 102px;height: 64px;float: left"></a>
+        <div class="category">
+            <img src="{% static 'logo/img1.png' %}" alt="xx" style="width: 40px;height: 40px;">
+
+        </div>
+
+        <div style="position: absolute;margin-right: 5px;margin-top: 15px" >
+            <a href="{% url 'mysql_add' %}" class="btn btn-success">发起项目</a>
+        </div>
+
+        <div class="search">
+            <form action="">
+                <input type="text" class="search-text" placeholder="搜索项目" name="q">
+                {#                <button class="search-btn"><i class="icon-search"></i></button>#}
+            </form>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li>
+                    <span class="line"></span>
+                    <a href="{% url 'home' %}" class="dreamer">项目管理</a>
+
+                </li>
+                {% if request.session.user_dic.username %}
+                    <li>
+                        <span class="line"></span>
+
+                        <a href=""
+                           class="icon-text__pink register">{{ request.session.user_dic.username }}
+                        </a>
+                        <a href="{% url 'login_out' %}"
+                           class="icon-text__pink register">退出
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <span class="line"></span>
+                        <a href="{% url 'user_register' %}" class="icon-text__pink register">注册</a>
+                    </li>
+                    <li>
+                        <span class="line"></span>
+                        <a href="{% url 'user_login' %}">登录</a>
+                    </li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+    <div class="header-shadow"></div>
+</header>
+
+<div class="main">
+    <div class="main-inner body-width">
+        <div class="banner clearfix">
+            <div class="slider" id="slider">
+                <ul class="slider-wrapper">
+                    {% for hot in hot %}
+                        <li class="item" data-title="{{ hot.desc }}">
+                            <a href="{% url 'mysql_detail' %}?id={{ hot.id }}" class="pic">
+                                <img src="/media/{{ hot.com_img }}"
+                                     alt="#" style="width: 710px;height: 443px"></a>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <a href="javascript:;" class="slider-prev"></a>
+                <a href="javascript:;" class="slider-next"></a>
+                <div class="slider-title">
+                    <h2></h2>
+                    <span></span>
+                </div>
+
+            </div>
+            <div class="banner-info">
+                <div class="news body-border">
+                    <ul>
+                        <li class="title">我的个人信息</li>
+                        <li class="link">
+                            <a href="#">用户名：{{ user_obj.username }}</a>
+                            <span></span>
+                            <a href="#">手机号：{{ user_obj.telephone }}</a>
+                            <span></span>
+                            <a href="">来源：{{ user_obj.addr }}</a>
+                            <span></span>
+                        </li>
+                        <li class="choose">
+                            <a href="{% url 'apply_reg' %}">申请记录</a>
+                            <span class="icon-text__pink">more</span>
+                            <a href="{% url 'shelf' %}">收藏项目</a>
+                            <span class="icon-text__pink">my</span>
+                        </li>
+                        <li class="assistant">
+                            <p>修改信息:
+                                <a href="#" data-toggle="modal"
+                                   data-target="#editModal">点击修改</a>
+                                <img src="/media/{{ user_obj.avatar }}" class="round_icon2" alt=""
+                                     id="old_img">
+
+                            </p>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="app body-border">
+                    <a href="{% url 'mysql_detail' %}?id={{ hot_com.id }}"> <span style="color: red">我们最热的项目</span> </a>
+                    <a href="{% url 'mysql_detail' %}?id={{ hot_com.id }}"><img src="/media/{{ hot_com.com_img }}" alt=""
+                                                                              style="width: 466px;height: 107px"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-cont main-recommend">
+            <div class="main-cont__title">
+
+                <ul class="pagination">
+                    {{ page_html }}
+                </ul>
+
+                <p class="list">
+                    <a href="{% url 'home' %}">全部</a>
+                    <span>|</span>
+                    {% for field in type_query %}
+                        <a href="{% url 'home' %}?q={{ field.name }}">{{ field.name }}</a>
+                        <span>|</span>
+                    {% endfor %}
+
+
+                </p>
+            </div>
+            <ul class="main-cont__list clearfix">
+                {% for foo in query %}
+
+                    <li class="item">
+                        {#                    {% url 'book_detail' %}?book_id={{ book.id }}#}
+                        <a href="{% url 'mysql_detail' %}?id={{ foo.id }}" class="pic"><img
+                                src="/media/{{ foo.com_img }}" alt="#"
+                                style="width: 222px;height: 298px"></a>
+                        <div class="info">
+                            <a href="{% url 'mysql_detail' %}?id={{ foo.id }}" class="title">{{ foo.name }}
+                                ||<span style="color: #f64041"
+                                        class="glyphicon glyphicon-fire">{{ foo.hot }}:热力值</span></a>
+
+                            {#                            <a href="#" class="icon-text__pink purchase">良品购</a>#}
+                        </div>
+                    </li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        {#        <div class="main-cont main-album">#}
+        {#            <div class="main-cont__title">#}
+        {#                <h3>广告</h3>#}
+        {#                <a href="#" class="more" data-toggle="modal"#}
+        {#                   data-target="#myModal" data-whatever="{{ obj.id }}">发布广告 ></a>#}
+        {#            </div>#}
+        {#            <ul class=" main-cont__list clearfix">#}
+        {#                {% for adv in adv_query %}#}
+        {##}
+        {##}
+        {#                    <li class="item">#}
+        {#                        <a href="#" class="pic"><img src="/media/{{ adv.adv_img }}" alt="#"#}
+        {#                                                     style="width: 224px;height: 224px;"></a>#}
+        {#                        <div class="info">#}
+        {#                            <a href="{{ adv.href }}" class="title">{{ adv.name }}</a>#}
+        {#                            <p>价格：{{ adv.price }}￥</p>#}
+        {#                            <p>by <a href="#" class="author">Moollly</a></p>#}
+        {#                        </div>#}
+        {#                    </li>#}
+        {#                {% endfor %}#}
+        {##}
+        {#            </ul>#}
+        {#        </div>#}
+
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">个人信息完善</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <img src="media/{{ user_obj.avatar }}" class="round_icon" alt="" id="old_img">
+                </p>
+                <form id="myForm" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    <div>
+
+                        <label for="id_icon">
+                            <!--提交的头像展示-->
+                            <img src="" class="round_icon" alt="新头像" id="myImg">
+                        </label>
+                    </div>
+                    <input type="file" id="id_icon" name="icon" style="display: none">
+                    <p>
+                        用户名：<input type="text" value="{{ request.session.user_dic.username }}" disabled>
+
+                    </p>
+                    <p>
+                        加入的社团：<input type="text" class="form-control" value="{{ user_obj.community }}" disabled>
+                    </p>
+                    <p>
+                        新手机号：<input type="text" name="telephone" class="form-control" value="{{ user_obj.telephone }}">
+                    </p>
+                    <p>
+                        院校专业班级：<input type="text" name="addr" class="form-control" value="{{ user_obj.addr }}">
+                    </p>
+
+                    <input type="button" id="id_button" value="提交" class="btn btn-warning">
+                </form>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                {#                    <button type="button" class="btn btn-success" id="pay_yes">领取</button>#}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'plugin/jquery-3.4.1/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'q_home/js/script.js' %}"></script>
+<script src="{% static 'plugin/bootstrap-3.4.1-dist/js/bootstrap.min.js' %}"></script>
+<script>
+    $(function () {
+        changeInfo();
+        weachIcon();
+    })
+
+
+    function weachIcon() {
+        // 头像预览
+        $('#id_icon').change(function () {
+            // 1.文件阅读器对象
+            let myFileObj = new FileReader();
+            // 2.获取用户上传的文件对象  $(this)[0].files[0]---jq里面无法对文件进行处理，需要转换成原生js
+            let fileObi = $(this)[0].files[0];
+            // 3.将文件对象交给阅读器对象
+            myFileObj.readAsDataURL(fileObi) // 异步操作， IO操作
+            // 4.利用文件阅读器将文件展示到前端页面，修改是src属性
+            // 5. 等待文件阅读器加载完毕  myFileObj.result---图片路径
+            myFileObj.onload = function () {
+                $('#myImg').attr('src', myFileObj.result)
+            }
+        })
+
+    }
+
+    function changeInfo() {
+        // Ajax提交
+        $('#id_button').click(function () {
+            // ajax 提交文件需要借助FormData
+            var myFormData = new FormData();
+            // 普通键
+            $.each($('#myForm').serializeArray(), function (index, obj) {
+                myFormData.append(obj.name, obj.value)
+            })
+            myFormData.append('icon', $('#id_icon')[0].files[0]);  // 获取input框内部用户上传的文件对象
+
+            $.ajax({
+                url: "{% url 'ajax_change_files' %}",
+                type: "post",
+                data: myFormData,
+                dataType: "JSON",  // 对于返回来的数据，进行反序列化，ajax本身自带反序列化，但是加上他保险
+                processData: false,  // 让浏览器不要对你的数据进行任何的操作
+                contentType: false,  // 不要使用任何编码格式 对象formdata自带编码格式并且django能够识别该对象
+                success: function (ret) {
+                    if (ret.status) {
+                        // 把url放到img的src里面
+                        $('#old_img').attr('src', ret.url)
+                    }
+                }
+            })
+        })
+    }
+
+</script>
+</body>
+</html>

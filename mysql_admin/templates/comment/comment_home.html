@@ -1,0 +1,86 @@
+{% extends 'base/admin_base.html' %}
+{% load static %}
+{% block title %}评论管理{% endblock %}
+{% block css %}
+
+
+{% endblock %}
+{% block content %}
+
+    <!-- 待处理订单 -->
+    <div class="box box-primary">
+        <div class="box-header with-border" style="height: 60px">
+            <i class="fa fa-cube"></i>
+            <h3 class="box-title">评论信息</h3>
+            <h3 class="box-title" style="float: right">
+                <a href="{% url 'comment_add' %}" class="btn btn-success">添加</a>
+                {#                <a href="" class="btn btn-success">添加用户</a>#}
+            </h3>
+            <h3 class="box-title" style="float: right">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入名称" name="q">
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </div>
+
+                </form>
+            </h3>
+        </div>
+
+        <div class="box-body">
+
+            <!-- 数据表格 -->
+            <div class="table-box">
+
+                <!--数据列表-->
+                <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                    <thead>
+
+                    <tr>
+                        <th class="">ID</th>
+                        <th class="">内容</th>
+                        <th class="">评论人</th>
+                        <th class="">创建时间</th>
+
+
+                        <th class="text-center">操作</th>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    {% for field in query %}
+                        <tr>
+                            <td>{{ field.id }}</td>
+                            <td>{{ field.comment }}</td>
+                            <td>{{ field.userinfo.username }}</td>
+                            <td>{{ field.create_time }}</td>
+
+
+                            <td class="text-center">
+
+                                <a href="{% url 'comment_edit' %}?id={{ field.id }}"
+                                   class="btn btn-warning bg-olive btn-xs">编辑</a>
+
+                                <a href="{% url 'comment_delete' %}?id={{ field.id }}"
+
+                                   class="btn btn-danger btn-xs">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    {{ page_html }}
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+{% block js %}
+
+
+{% endblock %}

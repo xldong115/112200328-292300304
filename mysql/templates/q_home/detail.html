@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ query_book.name }}</title>
+    <link rel="stylesheet" href="{% static 'plugin/bootstrap-3.4.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugin/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'comment/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'comment/css/sinaFaceAndEffec.css' %}"/>
+    <style>
+        .round_icon {
+            width: 88px;
+            height: 88px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+
+{#面板#}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>
+                    <span>{{ query_book.name }}</span>
+
+                    <a class="btn btn-primary"
+                       style="float: right" id="getCom" href="">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                        申请进入项目</a>
+                    <span style="float: right">|</span>
+
+                    {% if my_start %}
+                        <a class="btn btn-success"
+                           style="float: right;" id="send_start">
+                                                <span class="glyphicon glyphicon-star" aria-hidden="true"
+                                                      style="color: yellow"></span>
+                            取消收藏</a>
+                    {% else %}
+                        <a class="btn btn-success"
+                           style="float: right;" id="send_start">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            添加收藏</a>
+                    {% endif %}
+
+                    <span style="float: left">|</span>
+                    <a class="btn btn-danger"
+                       style="float: left" href="javascript:history.back(-1)"><span class="glyphicon glyphicon-remove">返回上一级</span>
+                    </a>
+                </h3>
+                {#                <p><span class="btn btn-warning">价格{{ query_book.price }}￥</span></p>#}
+
+            </div>
+            <div class="panel-footer">
+                <div style="height: 18px">
+                    <span>欢迎来到跨专业交流系统</span>
+                    {#                        <span style="float: right;margin-top: -8px"#}
+                    {#                              class="btn btn-default">发布者:{{ query_book.userinfo.username }}</span>#}
+                    <span style="float: right;margin-top: -8px"
+                          class="btn btn-default">申请人数:{{ count }}人</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{#详情#}
+<div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 style="text-align: center">项目需求</h2>
+
+                        <div class="jumbotron">
+                            <p>{{ query.desc }}</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4" style="margin-top: 25px">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <span>项目类型</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                {% for foo in active %}
+{#                                    <p>#}
+{#                                        名称：{{ foo.name }}#}
+{#                                    </p>#}
+{#                                    <p>#}
+{#                                        内容：{{ foo.desc }}#}
+{#                                    </p>#}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {#            <div class="col-md-1"></div>#}
+
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <div id="content" style="width: 700px; height: auto;">
+                            <div class="wrap">
+                                <div class="comment">
+                                    {#                                    <div class="head-face">#}
+                                    {#                                        <img src="{{ request.session.user_dic.avatar }}"/>#}
+                                    {#                                        <p>{{ request.session.user_dic.username }}</p>#}
+                                    {#                                    </div>#}
+                                    <div class="content">
+                                        <form action="" id="sayForm">
+                                            {% csrf_token %}
+                                            <div class="cont-box">
+                                                    <textarea class="text" placeholder="请输入..."
+                                                              name="comment"></textarea>
+                                            </div>
+                                        </form>
+                                        <div class="tools-box">
+                                            <div class="operator-box-btn"><span class="face-icon">☺</span>
+                                                {#                                        <span#}
+                                                {#                                                class="img-icon">▧</span>#}
+                                            </div>
+                                            <a class="submit-btn"><input type="button" id="send_say"
+                                                                         value="提交评论"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="info-show">
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4"></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-1"></div>
+
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="bs-example" data-example-id="striped-table">
+                            <table class="table table-striped">
+
+                                <tbody>
+                                {% for comment in comment_query %}
+
+                                    <tr>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <img class="media-object"
+                                                         src="/media/{{ comment.userinfo.avatar }}"
+                                                         alt="..." style="width: 40px;height: 40px;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">{{ comment.userinfo.username }}</h4>
+                                                {{ comment.comment }} <span
+                                                    style="color: #2D2D2D;font-size: 10px">{{ comment.create_time }}</span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4"></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-1"></div>
+
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+<script src="{% static 'plugin/js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'plugin/bootstrap-3.4.1-dist/js/bootstrap.min.js' %}"></script>
+
+<script>
+    let ID = '{{ id }}'
+    $(function () {
+        // 申请
+        getCom();
+        sendStart();
+        saySend();
+    })
+
+    function getCom() {
+        $('#getCom').click(function () {
+            $.ajax({
+                url: "{% url 'apply_for' %}",
+                type: "POST",
+                data: {id: ID, csrfmiddlewaretoken: '{{ csrf_token }}'},
+                dataType: "JSON",     // 对于返回来的数据，进行反序列化，ajax本身自带反序列化，但是加上他保险
+                success: function (res) {
+                    if (res.status === 200) {
+                        alert(res.msg)
+                        window.location.href = location.href
+                    } else {
+                        alert(res.msg)
+                    }
+                }
+            })
+        })
+    }
+
+    function sendStart() {
+
+        $('#send_start').click(function () {
+            $.ajax({
+                url: "{% url 'add_collection' %}",
+                type: "POST",
+                data: {id: ID, csrfmiddlewaretoken: '{{ csrf_token }}'},
+                dataType: "JSON",     // 对于返回来的数据，进行反序列化，ajax本身自带反序列化，但是加上他保险
+                success: function (res) {
+                    if (res.status === 200) {
+                        alert('操作成功')
+                        window.location.href = location.href
+                    } else {
+                        alert('收藏失败')
+                    }
+                }
+            })
+        })
+    }
+
+    function saySend() {
+        $('#send_say').click(function () {
+
+            var new_form = $('#sayForm').serializeArray()
+            new_form.push({"name": "id", "value": ID})
+
+            $.ajax({
+                url: "{% url 'comment' %}",
+                type: "POST",
+                data: new_form,
+                dataType: "JSON",     // 对于返回来的数据，进行反序列化，ajax本身自带反序列化，但是加上他保险
+                success: function (res) {
+                    if (res.status === 200) {
+                        alert('发表成功')
+                        window.location.href = location.href
+                    } else {
+                        alert('发表失败')
+                    }
+                }
+            })
+
+
+        })
+    }
+
+</script>
+
+</body>
+</html>

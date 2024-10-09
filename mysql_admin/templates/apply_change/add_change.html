@@ -1,0 +1,40 @@
+{% extends 'base/admin_base.html' %}
+{% load static %}
+{% block title %}申请记录管理{% endblock %}
+{% block css %}
+
+
+{% endblock %}
+{% block content %}
+<div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+
+        <form method="post" style="width: 480px" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <div>{% if form_error %}
+                <p style="color: red">{{ form_error }}</p>
+            {% endif %} </div>
+
+            {% for fields in form %}
+                {{ fields.label }}
+                {{ fields }}
+            {% endfor %}
+
+
+            <button type="submit" class="btn btn-success">添加</button>
+        </form>
+
+    </div>
+    <div class="col-md-4"></div>
+
+
+</div>
+<script src="{% static 'plugin/jquery-3.4.1/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'plugin/bootstrap-3.4.1-dist/js/bootstrap.min.js' %}"></script>
+    <!-- 待处理订单 /-->
+{% endblock %}
+{% block js %}
+
+
+{% endblock %}
