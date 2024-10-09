@@ -1,0 +1,183 @@
+INFO 2024-10-10 00:10:53,558 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,563 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,567 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,572 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,577 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,582 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,585 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,590 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,594 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,600 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,603 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,607 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,611 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,614 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,621 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,625 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,628 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,631 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,635 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:53,642 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,680 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,683 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,687 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,690 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,695 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,698 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,701 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,703 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,707 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,710 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,714 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,716 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,719 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,722 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,725 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,728 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,730 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,733 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,737 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:10:54,741 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,262 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,267 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,272 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,276 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,281 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,285 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,288 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,294 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,297 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,303 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,306 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,310 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,315 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,322 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,325 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,329 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,333 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,337 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,343 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:45,347 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,381 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,385 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,388 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,391 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,394 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,396 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,400 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,403 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,406 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,409 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,412 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,415 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,418 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,423 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,427 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,431 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,434 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,438 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,441 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:19:46,445 basehttp 124 "GET /com/user_login/ HTTP/1.1" 302 0
+INFO 2024-10-10 00:42:06,391 basehttp 124 "GET / HTTP/1.1" 302 0
+INFO 2024-10-10 00:42:06,408 basehttp 124 "GET /mysql/user_login/ HTTP/1.1" 200 46996
+INFO 2024-10-10 00:42:06,470 basehttp 124 "GET /static/user/css/demo.css HTTP/1.1" 200 1567
+INFO 2024-10-10 00:42:06,470 basehttp 124 "GET /static/user/css/default.css HTTP/1.1" 200 1302
+INFO 2024-10-10 00:42:06,470 basehttp 124 "GET /static/user/css/styles.css HTTP/1.1" 200 6161
+INFO 2024-10-10 00:42:06,472 basehttp 124 "GET /static/user/css/loaders.css HTTP/1.1" 200 57682
+INFO 2024-10-10 00:42:06,476 basehttp 124 "GET /static/user/img/tick.png HTTP/1.1" 200 1023
+INFO 2024-10-10 00:42:06,477 basehttp 124 "GET /static/user/img/user_icon_copy.png HTTP/1.1" 200 1149
+INFO 2024-10-10 00:42:06,495 basehttp 124 "GET /static/user/layui/css/layui.css HTTP/1.1" 200 31424
+INFO 2024-10-10 00:42:06,503 basehttp 124 "GET /static/user/img/lock_icon_copy.png HTTP/1.1" 200 1189
+INFO 2024-10-10 00:42:06,504 basehttp 124 "GET /static/user/img/key.png HTTP/1.1" 200 392
+INFO 2024-10-10 00:42:06,510 basehttp 124 "GET /static/user/layui/layui.js HTTP/1.1" 200 5466
+WARNING 2024-10-10 00:42:06,512 basehttp 124 "GET /static/user/js/stopExecutionOnTimeout.js%3Ft%3D1 HTTP/1.1" 404 1739
+INFO 2024-10-10 00:42:06,515 basehttp 124 "GET /static/user/js/Treatment.js HTTP/1.1" 200 3717
+INFO 2024-10-10 00:42:06,517 basehttp 124 "GET /static/user/js/jquery.min.js HTTP/1.1" 200 93106
+INFO 2024-10-10 00:42:06,518 basehttp 124 "GET /static/user/js/Particleground.js HTTP/1.1" 200 7665
+INFO 2024-10-10 00:42:06,525 basehttp 124 "GET /static/user/js/jquery.mockjax.js HTTP/1.1" 200 32561
+INFO 2024-10-10 00:42:06,526 basehttp 124 "GET /static/user/img/RequestAnimationFrame.js HTTP/1.1" 200 535
+INFO 2024-10-10 00:42:06,527 basehttp 124 "GET /static/user/js/jquery-ui.min.js HTTP/1.1" 200 237548
+INFO 2024-10-10 00:42:06,527 basehttp 124 "GET /static/user/img/Detector.js HTTP/1.1" 200 1645
+INFO 2024-10-10 00:42:06,528 basehttp 124 "GET /static/user/img/ThreeExtras.js HTTP/1.1" 200 87538
+INFO 2024-10-10 00:42:06,528 basehttp 124 "GET /static/user/img/ThreeWebGL.js HTTP/1.1" 200 140104
+INFO 2024-10-10 00:42:06,539 basehttp 124 "GET /static/user/layui/lay/modules/layer.js HTTP/1.1" 200 21615
+INFO 2024-10-10 00:42:06,693 basehttp 124 "GET /static/user/layui/css/modules/layer/default/layer.css?v=3.0.3303 HTTP/1.1" 200 14560
+INFO 2024-10-10 00:42:06,701 basehttp 124 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2024-10-10 00:42:06,708 basehttp 124 "GET /mysql/user_login/ HTTP/1.1" 200 46996
+ERROR 2024-10-10 00:42:22,426 exception 115 Internal Server Error: /mysql/user_login/
+Traceback (most recent call last):
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'mysql.mysql_userinfo' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\xie\Desktop\102202156-102202157-master\mysql\views\account.py", line 59, in user_login
+    if not user_query.exists():
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\models\query.py", line 715, in exists
+    return self.query.has_results(using=self.db)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\models\sql\query.py", line 509, in has_results
+    return compiler.has_results()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\models\sql\compiler.py", line 1037, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\models\sql\compiler.py", line 1068, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\xie\anaconda3\envs\management\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'mysql.mysql_userinfo' doesn't exist")
+ERROR 2024-10-10 00:42:22,844 basehttp 124 "POST /mysql/user_login/ HTTP/1.1" 500 223544
+INFO 2024-10-10 00:42:23,082 basehttp 124 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2024-10-10 00:42:23,117 basehttp 124 "GET /mysql/user_login/ HTTP/1.1" 200 46996
